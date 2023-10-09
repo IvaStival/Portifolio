@@ -1,5 +1,8 @@
-import { itemData } from "./components/BoxContent";
-import BoxContent from "./components/BoxContent";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { itemData } from "./components/BoxContent/BoxContent";
+import BoxContent from "./components/BoxContent/BoxContent";
 import BoxWindow from "./components/BoxWindow";
 import { font_text } from "@/utils/fontsUtils";
 var about_text: string =
@@ -9,14 +12,20 @@ export default function Home() {
   var data: itemData = {
     date: "2012 - Current",
     title: "IT/Software Engineer - Fantástica Filmes",
-    text: "Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.",
+    smalltext:
+      "Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.",
+    fulltext:
+      "Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow. Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  ",
     skills: ["C++", "Python", "ReactJS", "Express"],
   };
 
   var data2: itemData = {
     date: "",
     title: "HDControl",
-    text: "Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  ",
+    smalltext:
+      "Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  ",
+    fulltext:
+      "Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow. Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  Local system and server responsible, manage local network, server and workstations for computer graphics works. Plugs and systems developments for help local workflow.  ",
     skills: ["C++", "Python", "ReactJS", "Express", "HTML", "CSS"],
   };
 
@@ -31,4 +40,30 @@ export default function Home() {
       </div>
     </div>
   );
+
+  // const [act, setAct] = useState(false);
+
+  // const handleClick = (e) => {
+  //   setAct(!act);
+  // };
+
+  // return (
+  //   <div
+  //     onClick={handleClick}
+  //     className={`test flex w-[200px] max-w-[200px] break-words max-h-[100px] overflow-y-hidden ${
+  //       act ? `max-h-[1500px]` : ""
+  //     }
+  //       bg-green-500
+  //       transition-max-h
+  //       duration-700
+  //       linear
+  //       `}
+  //   >
+  //     <div className="child h-fit">
+  //       {act
+  //         ? "testkjaskjdhakjshdkajs hd kajshd kajhsdkjahd dasdasdasd asda  kjsdhkajsh dkajshdkaj sh dkajhdkajshd testkjaskjdhakjshdkajs hd kajshd kajhsdkjahd dasdasdasd asda  kjsdhkajsh dkajshdkaj sh dkajhdkajshd testkjaskjdhakjshdkajs hd kajshd kajhsdkjahd dasdasdasd asda  kjsdhkajsh dkajshdkaj sh dkajhdkajshd testkjaskjdhakjshdkajs hd kajshd kajhsdkjahd dasdasdasd asda  kjsdhkajsh dkajshdkaj sh dkajhdkajshd testkjaskjdhakjshdkajs hd kajshd kajhsdkjahd dasdasdasd asda  kjsdhkajsh dkajshdkaj sh dkajhdkajshd testkjaskjdhakjshdkajs hd kajshd kajhsdkjahd dasdasdasd asda  kjsdhkajsh dkajshdkaj sh dkajhdkajshd testkjaskjdhakjshdkajs hd kajshd kajhsdkjahd dasdasdasd asda  kjsdhkajsh dkajshdkaj sh dkajhdkajshd"
+  //         : "lakdjs asdasd asdasd dasd asda sasdad alskdjalksdj laksjdlaksjd"}
+  //     </div>
+  //   </div>
+  // );
 }

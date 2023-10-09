@@ -22,10 +22,11 @@ const Menu = () => {
         <div className={`subtitle mt-2 text-ivas-light-silver ${font_text}`}>
           I`m a software developer that always is looking for cool challenges
           and improvement of knowledge.
-          <span className="pipe-icon ml-1 font-extrabold text-ivas-light-green inline animate-blink-icon">
+          <span className="pipe-icon absolute ml-1 translate-y-[-3px] font-extrabold text-ivas-light-green inline animate-blink-icon ">
             &#x007C;
           </span>
         </div>
+
         {/* -------- Links -----------*/}
         <div className="links mt-5 font-extralight text-sm mt-2 text-ivas-light-silver">
           <div className="group about-content flex flex-row items-center cursor-pointer">
